@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #FFF8F0;
+  --color-brand-primary: #C08552;
+  --color-brand-secondary: #8C5A3C;
+  --color-brand-dark: #4B2E2B;
+  --color-brand-light: #FFFFFF;
+  
+  --font-sans: "Source Sans 3", "SF Pro Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", "SF Pro Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-image: linear-gradient(rgba(108, 108, 108, 0.55), rgba(108, 108, 108, 0.55)), url("/assets/images/bg one sky.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #4B2E2B;
+  font-family: var(--font-sans);
+  letter-spacing: -0.011em;
+}
+
+/* Custom scrollbars for a premium Apple look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 46, 43, 0.15);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 46, 43, 0.3);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Custom glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(192, 133, 82, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(75, 46, 43, 0.05);
+}
+
+.glass-panel-dark {
+  background: rgba(75, 46, 43, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Hide scrollbars for chrome, safari and opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbars for ie, edge and firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
